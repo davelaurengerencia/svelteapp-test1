@@ -247,7 +247,9 @@ function goToPage(page) {
         <tr>
           <td>{order.id}</td>
           <td>{order.date_created}</td>
-          <td>{order.status}</td>
+          <td>  <span class="badge rounded-pill bg-primary">
+    {order.status}
+  </span></td>
           <td>{order.billing.first_name} {order.billing.last_name}</td>
           <td>{getOrderMetaValue(order, 'svc_invoice') ? getOrderMetaValue(order, 'svc_invoice').invoiceNumber : 'Pendiente'}</td>
           <td>{getOrderMetaValue(order, 'svc_shippingInfo') ? getOrderMetaValue(order, 'svc_shippingInfo').shippingProvider : 'NA'}</td>
